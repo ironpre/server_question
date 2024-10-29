@@ -13,7 +13,7 @@
   注意：vnc_port不要比/etc/tigervnc/vncserver.users文件里面原来最大的端口号小，主要是因为防火墙的端口范围
 
 ## 2 新建账号以后的一些设置
-
+  ![tweak](./img/tweak.png "tweak")
 
 ### 2.1 标题
 
