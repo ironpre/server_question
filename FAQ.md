@@ -31,14 +31,14 @@
  - 如果/Public下的.bashrc没有的话，看一下软件安装目录，结合google或者百度，照猫画虎配置一下。
  - 更换软件版本（如果有不同的版本）也是一样，注释掉原来的环境变量，修改成新版本的软件的路径。
  - 例如：
-![bashrc](./img/bashrc.png "bashrc")
+- ![bashrc](./img/bashrc.png "bashrc")
  - 修改完成以后source ~/.bashrc
 ## 6 VNC端口更换(应该是需要root)
  -  可以查看/Public下makefile中vnc_config下的命令，查看防火墙设置端口。
  - [防火墙设置(一篇博客)](https://blog.csdn.net/qq_42055933/article/details/142604671 "")
 ## 7 文件传输或备份问题
  - MobaXterm软件 ssh登录服务器(软件使用敬请google或百度)
- ![ssh](./img/ssh.png "ssh")
+- ![ssh](./img/ssh.png "ssh")
  - scp传输(工位网络上传可以达到100MB):[scp命令传文件](https://blog.csdn.net/a545812327/article/details/111313810)
 注意scp传去自己账户有权限的目录下，博客是以root用户示范的
 - 其他办法敬请google或百度
