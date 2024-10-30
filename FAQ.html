@@ -1,0 +1,85 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FAQ.md</title>
+  <link rel="stylesheet" href="https://stackedit.io/style.css" />
+</head>
+
+<body class="stackedit">
+  <div class="stackedit__html"><h2 id="直接在线看就行">直接在线看就行</h2>
+<h2 id="新建账号需要root权限">1 新建账号(需要root权限)</h2>
+<ul>
+<li>在/Public目录下有一个Makefile脚本(可以copy仓库下的Makefile)</li>
+</ul>
+<blockquote>
+<p>cd /Public</p>
+</blockquote>
+<ul>
+<li>以创建名字为lgq，并配置vnc端口为17为例，执行以下命令创建用户 创建用户以后会切换至新创建得用户，再执行命令开启VNC</li>
+</ul>
+<blockquote>
+<p>make create_user name=lgq vnc_port=17</p>
+</blockquote>
+<ul>
+<li>以创建名字为lgq，并配置vnc端口为17为例，执行以下命令开启VNC</li>
+</ul>
+<blockquote>
+<p>make vnc_config  name=lgq vnc_port=17</p>
+</blockquote>
+<ul>
+<li>注意：vnc_port不要比/etc/tigervnc/vncserver.users文件里面原来最大的端口号小，主要是因为防火墙的端口范围</li>
+</ul>
+<h2 id="新建账号以后的一些设置">2 新建账号以后的一些设置</h2>
+<ul>
+<li>新建账户以后桌面如下<br>
+<img src="./img/new.png" alt="new" title="new"></li>
+<li>打开tweak在里面设置即可<br>
+<img src="./img/tweak.png" alt="tweak" title="tweak"></li>
+<li>其他设置自己灵活发挥<br>
+<img src="./img/tweak_setting.png" alt="tweak_setting" title="tweak_setting"></li>
+<li>设置好以后一般如下<br>
+<img src="./img/new2.png" alt="new2" title="new2"></li>
+<li>右下角四个框框是workplace设置，请自己找一下</li>
+</ul>
+<h2 id="logout问题">3 logout问题</h2>
+<p><img src="./img/logout.png" alt="logout" title="logout"><br>
+<strong>不要点logout，这很麻烦。目前只能备份文件，新建账号了</strong></p>
+<h2 id="update问题需要root权限">4 update问题(需要root权限)</h2>
+<p>最好不要update，不确定会不会出问题</p>
+<h2 id="bashrc（一般是软件环境变量问题）">5 .bashrc（一般是软件环境变量问题）</h2>
+<ul>
+<li>如果发现某些需要的软件安装了但是用不了，请检查一下~/.bashrc文件有没有设置对应的环境变量，可以看看/Public下的.bashrc。</li>
+<li>如果/Public下的.bashrc没有的话，看一下软件安装目录，结合google或者百度，照猫画虎配置一下。</li>
+<li>更换软件版本（如果有不同的版本）也是一样，注释掉原来的环境变量，修改成新版本的软件的路径。</li>
+<li>例如：<br>
+<img src="./img/bashrc.png" alt="bashrc" title="bashrc"></li>
+<li>修改完成以后source ~/.bashrc</li>
+</ul>
+<h2 id="vnc端口更换应该是需要root">6 VNC端口更换(应该是需要root)</h2>
+<ul>
+<li>可以查看/Public下makefile中vnc_config下的命令，查看防火墙设置端口。</li>
+<li><a href="https://blog.csdn.net/qq_42055933/article/details/142604671">防火墙设置(一篇博客)</a></li>
+</ul>
+<h2 id="文件传输或备份问题">7 文件传输或备份问题</h2>
+<ul>
+<li>MobaXterm软件 ssh登录服务器(软件使用敬请google或百度)<br>
+<img src="./img/ssh.png" alt="ssh" title="ssh"></li>
+<li>scp传输(工位网络上传可以达到100MB):<a href="https://blog.csdn.net/a545812327/article/details/111313810">scp命令传文件</a><br>
+注意scp传去自己账户有权限的目录下，博客是以root用户示范的</li>
+<li>其他办法敬请google或百度</li>
+</ul>
+<h2 id="连接服务器问题">8连接服务器问题</h2>
+<ul>
+<li>推荐<a href="https://www.realvnc.com/en/connect/download/viewer/?lai_vid=99JdlQ1wyirn&amp;lai_sr=10-14&amp;lai_sl=l">VNC Viewer by RealVNC</a><br>
+可以不登录，可以直接使用</li>
+<li><a href="https://blog.csdn.net/shao_yc/article/details/103300402">Windows下通过VNC Viewer访问Linux服务器</a><br>
+点开直接看4就可以(如何打开像4的界面：上方菜单栏-&gt;file-&gt;new connection)。</li>
+<li>其他办法敬请google或百度</li>
+</ul>
+</div>
+</body>
+
+</html>
