@@ -48,3 +48,9 @@
 - [Windows下通过VNC Viewer访问Linux服务器](https://blog.csdn.net/shao_yc/article/details/103300402)
 点开直接看4就可以(如何打开像4的界面：上方菜单栏->file->new connection)。
  - 其他办法敬请google或百度
+## 9双击文件夹无法打开，右键无法打开终端
+- 一直转圈
+  ![can not open folder](./img/open_folder.png "open_folder")
+- 解决办法：重启vnc端口号，替换为自己对应的端口号
+> sudo systemctl restart vncserver@:自己端口号.service
+ 
