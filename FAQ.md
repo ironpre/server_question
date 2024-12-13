@@ -9,6 +9,8 @@
  - 以创建名字为lgq，并配置vnc端口为17为例，执行以下命令开启VNC
 
 >make vnc_config  name=lgq vnc_port=17
+- 重启vnc端口号
+  sudo make vnc_restart vnc_port=17
 >
  - 注意：vnc_port不要比/etc/tigervnc/vncserver.users文件里面原来最大的端口号小，主要是因为防火墙的端口范围
 ## 2 新建账号以后的一些设置
@@ -22,8 +24,9 @@
 ![new2](./img/new2.png "new2")
  - 右下角四个框框是workplace设置，请自己找一下
 ## 3 logout问题
+**以下这种情形就是寄了，目前暂时也只能备份文件，重建了**
 ![logout](./img/logout.png "logout")
-**不要点logout，这很麻烦。目前只能备份文件，新建账号了**
+**另外正常使用不要点logout，这很麻烦。目前暂时只能备份文件，新建账号了**
 ## 4 update问题(需要root权限)
 最好不要update，不确定会不会出问题
 ## 5 .bashrc（一般是软件环境变量问题）
@@ -48,9 +51,9 @@
 - [Windows下通过VNC Viewer访问Linux服务器](https://blog.csdn.net/shao_yc/article/details/103300402)
 点开直接看4就可以(如何打开像4的界面：上方菜单栏->file->new connection)。
  - 其他办法敬请google或百度
-## 9双击文件夹无法打开，右键无法打开终端
+## 9双击文件夹无法打开，右键无法打开终端(需要root权限)
 - 一直转圈
   ![can not open folder](./img/open_folder.png "open_folder")
-- 解决办法：重启vnc端口号，替换为自己对应的端口号
+- 解决办法：重启vnc端口号，替换为自己对应的端口号（也可以用makefile）
 > sudo systemctl restart vncserver@:自己端口号.service
  
