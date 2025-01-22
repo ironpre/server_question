@@ -2,14 +2,12 @@
 ## 1 新建账号(需要root权限) 
  - 在/Public目录下有一个Makefile脚本(可以copy仓库下的Makefile)
 >cd /Public
+- 查看用户对应的vnc端口
+> cat /etc/tigervnc/vncserver.users
+ - 以创建名字为lgq，并配置vnc端口为17(选最大的端口，没用过的)为例，执行以下命令创建用户并自动开启vnc
+>sudo make create_user name=lgq vnc_port=17 
 >
- - 以创建名字为lgq，并配置vnc端口为17为例，执行以下命令创建用户 创建用户以后会切换至新创建得用户，再执行命令开启VNC
->make create_user name=lgq vnc_port=17 
->
- - 以创建名字为lgq，并配置vnc端口为17为例，执行以下命令开启VNC
 
->make vnc_config  name=lgq vnc_port=17
->
  - 注意：vnc_port不要比/etc/tigervnc/vncserver.users文件里面原来最大的端口号小，主要是因为防火墙的端口范围
 ## 2 新建账号以后的一些设置
  - 新建账户以后桌面如下
